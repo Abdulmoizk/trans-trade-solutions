@@ -1,12 +1,13 @@
+"use client"
 import React, { useState } from 'react';
 import { Dialog } from '@radix-ui/react-dialog';
-import { X as CloseIcon, List as MenuIcon } from 'phosphor-react';
-// import MenuItems from './MenuItems';
-// import ContactInfo from './ContactInfo';
+import { X as CloseIcon, AlignJustify as MenuIcon } from 'lucide-react';
 import { Logo } from '@/common/media/icons/trans-trade';
+import MenuItems from './menuItems';
+import ContactInfo from './contactInfo';
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <>
