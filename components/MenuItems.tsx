@@ -2,7 +2,7 @@ import React from 'react';
 
 const MenuItems = () => {
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-4 font-semibold tracking-wider">
       <a href="/" className="hover:text-gray-400">Home</a>
       <a href="/about" className="hover:text-gray-400">About</a>
       <a href="/services" className="hover:text-gray-400">Services</a>

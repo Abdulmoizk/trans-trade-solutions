@@ -8,7 +8,7 @@ export default function Home() {
       {/* section1 */}
       <div className="relative">
         <video className="h-screen w-screen object-cover" autoPlay loop muted>
-          <source src="/bgvideo1.mp4" type="video/mp4" />
+          <source src="/bgvideo2.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
