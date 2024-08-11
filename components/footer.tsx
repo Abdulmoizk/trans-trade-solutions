@@ -6,7 +6,7 @@ import { Logo } from "@/common/media/icons/trans-trade";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6 mt-12">
+  <footer className="bg-[#1850A0] text-white py-6">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-evenly ">
           {/* Logo and Description */}
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 aria-label="Facebook"
               >
-                <span className="text-gray-400 hover:text-white cursor-pointer">
+                <span className="text-white cursor-pointer">
                   <Facebook size={24} />
                 </span>
               </Link>
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 aria-label="Twitter"
               >
-                <span className="text-gray-400 hover:text-white cursor-pointer">
+                <span className="text-white cursor-pointer">
                   <Twitter size={24} />
                 </span>
               </Link>
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 aria-label="Instagram"
               >
-                <span className="text-gray-400 hover:text-white cursor-pointer">
+                <span className="text-white cursor-pointer">
                   <Instagram size={24} />
                 </span>
               </Link>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 aria-label="LinkedIn"
               >
-                <span className="text-gray-400 hover:text-white cursor-pointer">
+                <span className="text-white cursor-pointer">
                   <Linkedin size={24} />
                 </span>
               </Link>
