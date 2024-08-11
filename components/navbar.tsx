@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Dialog } from '@radix-ui/react-dialog';
 import { X as CloseIcon, List as MenuIcon } from 'phosphor-react';
-import MenuItems from './MenuItems';
-import ContactInfo from './ContactInfo';
+// import MenuItems from './MenuItems';
+// import ContactInfo from './ContactInfo';
 import { Logo } from '@/common/media/icons/trans-trade';
 
 const Navbar = () => {
