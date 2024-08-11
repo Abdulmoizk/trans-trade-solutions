@@ -1,4 +1,3 @@
-// components/Footer.tsx
 import React from "react";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
