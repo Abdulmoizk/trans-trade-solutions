@@ -1,9 +1,12 @@
-import Navbar from "@/components/navbar";
+import Card from "@/components/Card";
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import {Package} from "lucide-react"
+import { specialFeaturesData } from "@/data/data";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Navbar />
       {/* section1 */}
       <div className="relative">
@@ -25,7 +28,9 @@ export default function Home() {
       {/* section2 */}
       <div className="flex flex-col md:flex-row items-center md:items-start">
         <div className="my-auto md:w-1/2 p-4">
-          <h1 className="text-4xl md:text-7xl text-[#1850A0] font-bold mb-4">Our Mission</h1>
+          <h1 className="text-4xl md:text-7xl text-[#1850A0] font-bold mb-4">
+            Our Mission
+          </h1>
           <p className="text-2xl md:text-4xl mb-3 font-bold">
             Our mission is to redefine the standards of global shipping through
             innovation, reliability, and sustainability. We are committed to
@@ -56,9 +61,53 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* separater */}
+      <div className="m-5" />
       {/* section3 */}
-
-      
+      <div>
+        <h1 className="text-4xl md:text-7xl text-center text-[#1850A0] font-bold mb-4">
+          Our Services
+        </h1>
+        <Card />
+      </div>
+      {/* section4 */}
+      <div className="flex flex-col md:flex-row items-center md:items-start">
+        <div className="relative left-20 md:w-1/2 p-4">
+          <div className="z-10 absolute bottom-20 -left-20 transform translate-x-4 -translate-y-4">
+            <Image
+              src="/5.jpg"
+              alt="mission"
+              width={500}
+              height={500}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="relative  ">
+            <Image
+              src="/1.jpg"
+              alt="mission"
+              width={500}
+              height={300}
+              className="rounded-lg shadow-lg h-[600px]"
+            />
+          </div>
+        </div>
+        <div className="my-auto md:w-1/2 p-4">
+          <h1 className="text-2xl md:text-5xl mb-4 font-bold text-[#1850A0]">
+            What Makes us Special
+          </h1>
+          {specialFeaturesData.map((item) => (
+            <div key={item.id} className="flex items-center mb-4">
+              <div className="flex items-start justify-center mr-4">
+                {item.img}
+              </div>
+              <p className="text-base font-semibold">
+               {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
     </main>
   );
 }
