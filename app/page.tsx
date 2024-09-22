@@ -1,5 +1,5 @@
 import Card from "@/components/Card";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar";
 import Image from "next/image";
 import { Package } from "lucide-react";
 import { specialFeaturesData } from "@/data/data";
