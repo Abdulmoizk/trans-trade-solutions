@@ -1,7 +1,7 @@
 import Card from "@/components/Card";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import {Package} from "lucide-react"
+import { Package } from "lucide-react";
 import { specialFeaturesData } from "@/data/data";
 
 export default function Home() {
@@ -101,9 +101,7 @@ export default function Home() {
               <div className="flex items-start justify-center mr-4">
                 {item.img}
               </div>
-              <p className="text-base font-semibold">
-               {item.desc}
-              </p>
+              <p className="text-base font-semibold">{item.desc}</p>
             </div>
           ))}
         </div>
