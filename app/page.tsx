@@ -1,18 +1,23 @@
 import Card from "@/components/Card";
-import Navbar from "@/components/navbar";
 import Image from "next/image";
-import { Package } from "lucide-react";
 import { specialFeaturesData } from "@/data/data";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      <Navbar />
-      {/* section1 */}
+      {/* Section 1 */}
       <div className="relative">
-        <video className="h-screen w-screen object-cover" autoPlay loop muted>
-          <source src="/bgvideo1.mp4" type="video/mp4" />
-        </video>
+        <div className="relative w-screen h-screen md:h-[500px] lg:h-[600px]">
+          <Image
+            src="/bg.jpg"
+            alt="background"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+        </div>
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
           <h1 className="text-4xl md:text-8xl font-bold mb-4">Shipping</h1>
@@ -25,76 +30,83 @@ export default function Home() {
           </p>
         </div>
       </div>
-      {/* section2 */}
-      <div className="flex flex-col md:flex-row items-center md:items-start">
+
+      {/* Section 2 */}
+      <div className="flex flex-col md:flex-row items-center md:items-start mx-auto max-w-7xl p-4">
         <div className="my-auto md:w-1/2 p-4">
           <h1 className="text-4xl md:text-7xl text-[#1850A0] font-bold mb-4">
             Our Mission
           </h1>
           <p className="text-2xl md:text-4xl mb-3 font-bold">
-            Our mission is to redefine the standards of global shipping through
-            innovation, reliability, and sustainability. We are committed to
-            delivering exceptional service by providing...
+            At Trans Trade Solutions, our vision is to be a global leader in
+            logistics solutions, recognized for our innovation, reliability, and
+            commitment to sustainability. We strive to seamlessly connect...
           </p>
-          <button className="mt-4 px-4 py-2 bg-[#1850A0] text-white ">
+          <Link href="/our-mission" className="mt-4 px-4 py-2 bg-[#1850A0] text-white">
             More Details
-          </button>
+          </Link>
         </div>
-        <div className="relative left-20 md:w-1/2 p-4">
-          <div className="z-10 absolute bottom-20 -left-20 transform translate-x-4 -translate-y-4">
+        {/* Images Section */}
+        <div className="relative md:w-1/2 p-4 flex justify-center items-center">
+          {/* First Image */}
+          <div className="z-10 absolute bottom-20 left-10 transform translate-x-4 -translate-y-4">
             <Image
               src="/2.jpg"
               alt="mission"
-              width={500}
-              height={500}
-              className="rounded-lg shadow-lg"
+              width={400}
+              height={400}
+              className="rounded-lg shadow-lg object-cover"
             />
           </div>
-          <div className="relative  ">
+          {/* Second Image */}
+          <div className="relative w-full">
             <Image
               src="/1.jpg"
               alt="mission"
               width={500}
               height={300}
-              className="rounded-lg shadow-lg h-[600px]"
+              className="rounded-lg shadow-lg h-[600px] object-cover"
             />
           </div>
         </div>
       </div>
-      {/* separater */}
+
+      {/* Section Separator */}
       <div className="m-5" />
-      {/* section3 */}
-      <div>
+
+      {/* Section 3 */}
+      <div className="mx-auto max-w-7xl sm:p-4">
         <h1 className="text-4xl md:text-7xl text-center text-[#1850A0] font-bold mb-4">
           Our Services
         </h1>
         <Card />
       </div>
-      {/* section4 */}
-      <div className="flex flex-col md:flex-row items-center md:items-start">
-        <div className="relative left-20 md:w-1/2 p-4">
-          <div className="z-10 absolute bottom-20 -left-20 transform translate-x-4 -translate-y-4">
+
+      {/* Section 4 */}
+      <div className="flex flex-col md:flex-row items-center md:items-start mx-auto max-w-7xl p-4">
+        <div className="relative md:w-1/2 p-4">
+          <div className="z-10 absolute bottom-20 left-10 transform translate-x-4 -translate-y-4">
             <Image
               src="/5.jpg"
               alt="mission"
-              width={500}
-              height={500}
-              className="rounded-lg shadow-lg"
+              width={400}
+              height={400}
+              className="rounded-lg shadow-lg object-cover"
             />
           </div>
-          <div className="relative  ">
+          <div className="relative">
             <Image
               src="/1.jpg"
               alt="mission"
               width={500}
               height={300}
-              className="rounded-lg shadow-lg h-[600px]"
+              className="rounded-lg shadow-lg h-[600px] object-cover"
             />
           </div>
         </div>
         <div className="my-auto md:w-1/2 p-4">
           <h1 className="text-2xl md:text-5xl mb-4 font-bold text-[#1850A0]">
-            What Makes us Special
+            What Makes Us Special
           </h1>
           {specialFeaturesData.map((item) => (
             <div key={item.id} className="flex items-center mb-4">

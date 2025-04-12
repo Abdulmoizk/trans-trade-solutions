@@ -1,100 +1,97 @@
 import React from "react";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { Logo } from "@/common/media/icons/trans-trade";
 
 const Footer: React.FC = () => {
   return (
-  <footer className="bg-[#1850A0] text-white py-6">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-evenly ">
-          {/* Logo and Description */}
-          <div className=" mb-6 md:mb-0">
-            <Logo className="size-32 text-white" />
+    <footer className="bg-[#1850A0] text-white py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Footer Top Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+          {/* Logo */}
+          <div>
+            <div className="flex justify-center md:justify-start">
+              <Logo className="size-28 text-white" />
+            </div>
           </div>
 
           {/* Quick Links */}
-          <div className=" mb-6 md:mb-0">
-            <h3 className="text-md font-semibold mb-2">Quick Links</h3>
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
             <ul>
-              <li className="text-sm mb-1">
-                <Link href="/">Home</Link>
-              </li>
-              <li className="text-sm mb-1">
-                <Link href="/about">About Us</Link>
-              </li>
-              <li className="text-sm mb-1">
-                <Link href="/services">Services</Link>
-              </li>
-              <li className="text-sm mb-1">
-                <Link href="/contact">Contact</Link>
-              </li>
+              {[
+                { href: "/", label: "Home" },
+                { href: "/about", label: "About Us" },
+                { href: "/services", label: "Services" },
+                { href: "/contact", label: "Contact" },
+              ].map((link) => (
+                <li key={link.href} className="text-sm mb-2 hover:underline">
+                  <Link href={link.href}>{link.label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact Information */}
-          <div className="flex flex-col w-1/4 mb-6 md:mb-0">
-            <h3 className="text-md font-semibold mb-2">Contact Us</h3>
-            <p className="text-sm mb-1">
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
+            <p className="text-sm mb-2">
               Office No. 502, Rock Trade Centre, Near Jilani Centre, Main Tower
             </p>
-            <Link href="mailto:info@transtrade.pk" className="text-sm mb-1">
+            <Link
+              href="mailto:info@transtrade.pk"
+              className="text-sm mb-2 block hover:underline"
+            >
               Email: info@transtrade.pk
             </Link>
-            <Link href="tel:+922132313030" className="text-sm mb-1">
+            <Link
+              href="tel:+922132313030"
+              className="text-sm block hover:underline"
+            >
               Phone: (021) 32313030
             </Link>
           </div>
 
-          {/* Social Media */}
-          <div className=" mb-6 md:mb-0">
-            <h3 className="text-md font-semibold mb-2">Follow Us</h3>
-            <div className="flex space-x-4">
+          {/* Social Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
+            <div className="flex justify-center md:justify-start space-x-4">
               <Link
                 href="https://www.facebook.com/profile.php?id=61559347383483"
                 target="_blank"
                 aria-label="Facebook"
               >
-                <span className="text-white cursor-pointer">
-                  <Facebook size={24} />
-                </span>
+                <Facebook className="hover:text-gray-300 transition" size={24} />
               </Link>
               <Link
                 href="https://www.twitter.com"
                 target="_blank"
                 aria-label="Twitter"
               >
-                <span className="text-white cursor-pointer">
-                  <Twitter size={24} />
-                </span>
+                <Twitter className="hover:text-gray-300 transition" size={24} />
               </Link>
               <Link
                 href="https://www.instagram.com"
                 target="_blank"
                 aria-label="Instagram"
               >
-                <span className="text-white cursor-pointer">
-                  <Instagram size={24} />
-                </span>
+                <Instagram className="hover:text-gray-300 transition" size={24} />
               </Link>
               <Link
                 href="https://www.linkedin.com"
                 target="_blank"
                 aria-label="LinkedIn"
               >
-                <span className="text-white cursor-pointer">
-                  <Linkedin size={24} />
-                </span>
+                <Linkedin className="hover:text-gray-300 transition" size={24} />
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="mt-6 border-t border-gray-700 pt-4 text-center">
-          <p className="text-sm">
-            &copy; 2024 Trans Trade Solutions. All rights reserved.
-          </p>
+        {/* Footer Bottom */}
+        <div className="mt-10 border-t border-white/20 pt-4 text-center text-sm">
+          &copy; 2024 Trans Trade Solutions. All rights reserved.
         </div>
       </div>
     </footer>
