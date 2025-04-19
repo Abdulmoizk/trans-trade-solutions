@@ -25,7 +25,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="flex flex-col md:flex-row gap-6 bg-[#fceff1] p-6 md:p-12 rounded-xl">
+      <div className="flex flex-col md:flex-row gap-6 p-6 md:p-12 rounded-xl">
         <div className="w-full md:w-1/2">
           <iframe
             className="w-full h-[600px] rounded-lg"

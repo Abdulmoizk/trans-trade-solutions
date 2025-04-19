@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
             <p className="text-sm mb-2">
-              Office No. 502, Rock Trade Centre, Near Jilani Centre, Main Tower
+              Suite No. L-311, 4th Floor, Marine Centre, Block 2, Clifton, Karachi, Pakistan
             </p>
             <Link
               href="mailto:info@transtrade.pk"

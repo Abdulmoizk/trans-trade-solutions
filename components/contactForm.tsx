@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,19 +17,40 @@ const contactFormSchema = z.object({
   message: z.string().min(1, { message: "Message is required" }),
 });
 
-
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [showMessage, setShowMessage] = useState(true);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset, 
+    reset,
+    watch,
   } = useForm({
     resolver: zodResolver(contactFormSchema),
   });
 
+
+  useEffect(() => {
+    if (status === "success" || status === "error") {
+      const timer = setTimeout(() => {
+        setShowMessage(false);
+      }, 5000);
+
+      return () => clearTimeout(timer); 
+    }
+  }, [status]);
+
+  useEffect(() => {
+    const subscription = watch(() => {
+      if (showMessage) {
+        setShowMessage(false);
+      }
+    });
+
+    return () => subscription.unsubscribe(); 
+  }, [watch, showMessage]);
 
   const onSubmit = async (formData: { name: string; email: string; subject: string; phone?: string; message: string }) => {
     setStatus("loading");
@@ -43,7 +64,8 @@ export default function ContactForm() {
 
       if (res.ok) {
         setStatus("success");
-        reset(); 
+        reset();
+        setShowMessage(true);
       } else {
         setStatus("error");
       }
@@ -167,14 +189,20 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="bg-[#1850A0] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#143d7a] transition"
+        className={`bg-[#1850A0] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#143d7a] transition ${
+          status === "loading" ? "opacity-50 cursor-not-allowed" : ""
+        }`}
         disabled={status === "loading"}
       >
         {status === "loading" ? "Sending..." : "Send Message"}
       </button>
 
-      {status === "success" && <p className="text-green-600">Message sent successfully!</p>}
-      {status === "error" && <p className="text-red-600">Something went wrong. Please try again.</p>}
+      {showMessage && status === "success" && (
+        <p className="text-green-600 text-xs ml-1 ">Message sent successfully!</p>
+      )}
+      {showMessage && status === "error" && (
+        <p className="text-red-500 text-xs ml-1 ">Something went wrong. Please try again.</p>
+      )}
     </form>
   );
 }
