@@ -27,95 +27,79 @@ export default function AboutPage() {
                     </p>
                 </div>
             </section>
-            <section className="flex flex-col-reverse md:flex-row items-center gap-10 mx-auto max-w-7xl px-4 py-16">
+            <section
+                className={`flex flex-col-reverse md:flex-row  items-center gap-10 max-w-7xl px-4 py-20 mx-auto`}
+            >
                 <div className="w-full md:w-1/2 space-y-6">
                     <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#1850A0]">
                         Our Mission
                     </h1>
-                    <p className="text-base sm:text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed">
-                        At Trans Trade Solutions, our vision is to be a global leader in logistics solutions,
-                        recognized for our innovation, reliability, and commitment to sustainability. We strive
-                        to seamlessly connect businesses and communities through efficient supply chain
-                        management, leveraging cutting-edge technology and industry expertise. Our goal is
-                        to create a world where goods move freely and efficiently, empowering our partners
-                        to thrive in a dynamic marketplace.
-                    </p>
+                    <div className="space-y-4">
+                        <p className="text-base sm:text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed">
+                            At Trans Trade Solutions, our vision is to be a global leader in logistics solutions,
+                            recognized for our innovation, reliability, and commitment to sustainability. We strive
+                            to seamlessly connect businesses and communities through efficient supply chain
+                            management, leveraging cutting-edge technology and industry expertise. Our goal is
+                            to create a world where goods move freely and efficiently, empowering our partners
+                            to thrive in a dynamic marketplace.
+                        </p>
+                    </div>
                 </div>
 
-                <div className="w-full md:w-1/2 relative">
-                    <div className="absolute bottom-16 -left-10 z-10 hidden md:block">
-                        <Image
-                            src="/2.jpg"
-                            alt="Overlay mission image"
-                            width={400}
-                            height={400}
-                            className="rounded-lg shadow-xl"
-                        />
-                    </div>
-                    <div className="relative z-0">
-                        <Image
-                            src="/1.jpg"
-                            alt="Main mission image"
-                            width={600}
-                            height={600}
-                            className="rounded-lg shadow-xl h-[500px] w-full object-cover"
-                        />
-                    </div>
+                <div className="w-full md:w-1/2 flex justify-center">
+                    <Image
+                        src={"/2.jpg"}
+                        alt={`Overlay mission image`}
+                        width={700}
+                        height={500}
+                        className="rounded-xl shadow-xl object-cover"
+                    />
                 </div>
             </section>
-
-            <section className="flex flex-col md:flex-row items-center gap-10 mx-auto max-w-7xl px-4 py-16">
-                <div className="w-full md:w-1/2 relative">
-                    <div className="absolute bottom-16 -left-10 z-10 hidden md:block">
-                        <Image
-                            src="/5.jpg"
-                            alt="Core values overlay"
-                            width={400}
-                            height={400}
-                            className="rounded-lg shadow-xl"
-                        />
-                    </div>
-                    <div className="relative z-0">
-                        <Image
-                            src="/1.jpg"
-                            alt="Core values main"
-                            width={600}
-                            height={600}
-                            className="rounded-lg shadow-xl h-[500px] w-full object-cover"
-                        />
-                    </div>
-                </div>
-
+            <section
+                className={`flex flex-col-reverse md:flex-row-reverse  items-center gap-10 max-w-7xl px-4 py-20 mx-auto`}
+            >
                 <div className="w-full md:w-1/2 space-y-6">
                     <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#1850A0]">
                         Our Core Values
                     </h2>
-                    <ul className="space-y-6 text-gray-700 text-base sm:text-lg lg:text-xl font-medium">
-                        <li>
-                            <h3 className="text-xl sm:text-2xl font-semibold text-[#1850A0]">Integrity</h3>
-                            <p>
-                                We uphold the highest ethical standards in all our interactions, fostering trust
-                                with our clients, partners, and employees.
-                            </p>
-                        </li>
-                        <li>
-                            <h3 className="text-xl sm:text-2xl font-semibold text-[#1850A0]">Customer Focus</h3>
-                            <p>
-                                We prioritize our customers’ needs, delivering tailored solutions that ensure
-                                satisfaction and build long-term relationships.
-                            </p>
-                        </li>
-                        <li>
-                            <h3 className="text-xl sm:text-2xl font-semibold text-[#1850A0]">Innovation</h3>
-                            <p>
-                                We embrace technology and creative thinking to enhance our services, continually
-                                seeking new ways to improve efficiency and effectiveness.
-                            </p>
-                        </li>
-                    </ul>
+                    <div className="space-y-4">
+                        <ul className="space-y-6 text-gray-700 text-base sm:text-lg lg:text-xl font-medium">
+                            <li>
+                                <h3 className="text-xl sm:text-2xl font-semibold text-[#1850A0]">Integrity</h3>
+                                <p>
+                                    We uphold the highest ethical standards in all our interactions, fostering trust
+                                    with our clients, partners, and employees.
+                                </p>
+                            </li>
+                            <li>
+                                <h3 className="text-xl sm:text-2xl font-semibold text-[#1850A0]">Customer Focus</h3>
+                                <p>
+                                    We prioritize our customers’ needs, delivering tailored solutions that ensure
+                                    satisfaction and build long-term relationships.
+                                </p>
+                            </li>
+                            <li>
+                                <h3 className="text-xl sm:text-2xl font-semibold text-[#1850A0]">Innovation</h3>
+                                <p>
+                                    We embrace technology and creative thinking to enhance our services, continually
+                                    seeking new ways to improve efficiency and effectiveness.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="w-full md:w-1/2 flex justify-center">
+                    <Image
+                        src={"/2.jpg"}
+                        alt={`Overlay mission image`}
+                        width={700}
+                        height={500}
+                        className="rounded-xl shadow-xl object-cover"
+                    />
                 </div>
             </section>
-
             <section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px] bg-black/90">
                 <div
                     className="absolute inset-0 bg-cover bg-fixed bg-center opacity-30"
