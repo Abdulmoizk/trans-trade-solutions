@@ -5,7 +5,7 @@ export default function AboutPage() {
         <main className="overflow-x-hidden">
             <section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px]">
                 <Image
-                    src="/bg.jpg"
+                    src="/about.jpg"
                     alt="Expertise background"
                     fill
                     className="object-cover"
@@ -27,7 +27,6 @@ export default function AboutPage() {
                     </p>
                 </div>
             </section>
-            {/* Our Mission Section */}
             <section className="flex flex-col-reverse md:flex-row items-center gap-10 mx-auto max-w-7xl px-4 py-16">
                 <div className="w-full md:w-1/2 space-y-6">
                     <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-[#1850A0]">
@@ -65,7 +64,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Core Values Section */}
             <section className="flex flex-col md:flex-row items-center gap-10 mx-auto max-w-7xl px-4 py-16">
                 <div className="w-full md:w-1/2 relative">
                     <div className="absolute bottom-16 -left-10 z-10 hidden md:block">
@@ -118,27 +116,24 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Background Expertise Section */}
-<section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px] bg-black/90">
-    {/* Background Image with Fixed Position */}
-    <div
-        className="absolute inset-0 bg-cover bg-fixed bg-center opacity-30"
-        style={{ backgroundImage: "url('/bg.jpg')" }}
-    />
-    {/* Content */}
-    <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-        <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4">
-            Expertise & Experience
-        </h2>
-        <p className="text-sm sm:text-base lg:text-lg max-w-3xl font-medium leading-relaxed">
-            With over a decade of industry experience, Trans Trade Solutions boasts a seasoned
-            team of supply chain professionals with deep expertise across various sectors and
-            geographies. Our services extend beyond Freight Forwarding to include Customs
-            Clearance, Inland Transportation, and Indenting. We have the knowledge and
-            resources to deliver exceptional results.
-        </p>
-    </div>
-</section>
+            <section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px] bg-black/90">
+                <div
+                    className="absolute inset-0 bg-cover bg-fixed bg-center opacity-30"
+                    style={{ backgroundImage: "url('/aboutbg.jpg')" }}
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+                    <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4">
+                        Expertise & Experience
+                    </h2>
+                    <p className="text-sm sm:text-base lg:text-lg max-w-3xl font-medium leading-relaxed">
+                        With over a decade of industry experience, Trans Trade Solutions boasts a seasoned
+                        team of supply chain professionals with deep expertise across various sectors and
+                        geographies. Our services extend beyond Freight Forwarding to include Customs
+                        Clearance, Inland Transportation, and Indenting. We have the knowledge and
+                        resources to deliver exceptional results.
+                    </p>
+                </div>
+            </section>
 
         </main>
     );

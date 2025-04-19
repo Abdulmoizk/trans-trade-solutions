@@ -3,10 +3,9 @@ import Image from "next/image";
 export default function CareersPage() {
     return (
         <main className="overflow-x-hidden">
-            {/* Hero Section */}
             <section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px]">
                 <Image
-                    src="/bg.jpg"
+                    src="/career.jpg"
                     alt="Careers background"
                     fill
                     className="object-cover"
@@ -24,7 +23,6 @@ export default function CareersPage() {
                 </div>
             </section>
 
-            {/* About Us Section */}
             <section className="py-20 px-4 max-w-7xl mx-auto">
                 <div className="text-center space-y-8">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1850A0]">
@@ -36,16 +34,13 @@ export default function CareersPage() {
                 </div>
             </section>
 
-            {/* Why Work with Us Section */}
             <section className="bg-gray-100 py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-[#1850A0] mb-12">
                         Why Work with Trans Trade Solutions?
                     </h2>
 
-                    {/* Work Environment, Culture, etc. */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        {/* Work Environment */}
                         <div className="space-y-6">
                             <h3 className="text-2xl font-semibold text-[#1850A0]">Work Environment</h3>
                             <p className="text-lg text-gray-700">
@@ -53,7 +48,6 @@ export default function CareersPage() {
                             </p>
                         </div>
 
-                        {/* Culture */}
                         <div className="space-y-6">
                             <h3 className="text-2xl font-semibold text-[#1850A0]">Culture</h3>
                             <p className="text-lg text-gray-700">
@@ -61,7 +55,6 @@ export default function CareersPage() {
                             </p>
                         </div>
 
-                        {/* Learning & Development */}
                         <div className="space-y-6">
                             <h3 className="text-2xl font-semibold text-[#1850A0]">Learning & Development</h3>
                             <p className="text-lg text-gray-700">
@@ -69,7 +62,6 @@ export default function CareersPage() {
                             </p>
                         </div>
 
-                        {/* Diversity & Inclusion */}
                         <div className="space-y-6">
                             <h3 className="text-2xl font-semibold text-[#1850A0]">Diversity & Inclusion</h3>
                             <p className="text-lg text-gray-700">
@@ -77,7 +69,6 @@ export default function CareersPage() {
                             </p>
                         </div>
 
-                        {/* Compensation & Benefits */}
                         <div className="space-y-6">
                             <h3 className="text-2xl font-semibold text-[#1850A0]">Compensation & Benefits</h3>
                             <p className="text-lg text-gray-700">
@@ -85,7 +76,6 @@ export default function CareersPage() {
                             </p>
                         </div>
 
-                        {/* Job Openings */}
                         <div className="space-y-6">
                             <h3 className="text-2xl font-semibold text-[#1850A0]">Job Openings</h3>
                             <p className="text-lg text-gray-700">
@@ -96,11 +86,10 @@ export default function CareersPage() {
                 </div>
             </section>
 
-            {/* Call to Action */}
             <section className="py-32 text-white text-center relative bg-black/90">
                 <div
                     className="absolute inset-0 bg-cover bg-fixed bg-center opacity-30"
-                    style={{ backgroundImage: "url('/bg.jpg')" }}
+                    style={{ backgroundImage: "url('/careerbg.jpg')" }}
                 />
                 <div className="relative z-10">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
