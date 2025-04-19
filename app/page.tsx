@@ -6,11 +6,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      {/* Section 1 */}
       <div className="relative">
         <div className="relative w-screen h-screen md:h-[500px] lg:h-[600px]">
           <Image
-            src="/bg.jpg"
+            src="/main.jpg"
             alt="background"
             fill
             className="object-cover"
@@ -31,7 +30,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Section 2 */}
       <div className="flex flex-col md:flex-row items-center md:items-start mx-auto max-w-7xl p-4 pt-24">
         <div className="my-auto md:w-1/2 p-4">
           <h1 className="text-4xl md:text-7xl text-[#1850A0] font-bold mb-4">
@@ -46,35 +44,19 @@ export default function Home() {
             More Details
           </Link>
         </div>
-        {/* Images Section */}
-        <div className="relative md:w-1/2 p-4 flex justify-center items-center">
-          {/* First Image */}
-          <div className="z-10 absolute bottom-20 left-10 transform translate-x-4 -translate-y-4">
-            <Image
-              src="/2.jpg"
-              alt="mission"
-              width={400}
-              height={400}
-              className="rounded-lg shadow-lg object-cover"
-            />
-          </div>
-          {/* Second Image */}
-          <div className="relative w-full">
-            <Image
-              src="/1.jpg"
-              alt="mission"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-lg h-[600px] object-cover"
-            />
-          </div>
+        <div className="md:w-1/2 p-4 flex justify-center items-center">
+          <Image
+            src="/mission.jpg"
+            alt="mission"
+            width={1000}
+            height={1000}
+            className="rounded-lg shadow-lg object-cover"
+          />
         </div>
       </div>
 
-      {/* Section Separator */}
       <div className="m-5" />
 
-      {/* Section 3 */}
       <div className="mx-auto max-w-7xl sm:p-4 pt-24">
         <h1 className="text-4xl md:text-7xl text-center text-[#1850A0] font-bold mb-4">
           Our Services
@@ -85,27 +67,16 @@ export default function Home() {
         <Card />
       </div>
 
-      {/* Section 4 */}
       <div className="flex flex-col md:flex-row items-center md:items-start mx-auto max-w-7xl p-4">
-        <div className="relative md:w-1/2 p-4">
-          <div className="z-10 absolute bottom-20 left-10 transform translate-x-4 -translate-y-4">
-            <Image
-              src="/5.jpg"
-              alt="mission"
-              width={400}
-              height={400}
-              className="rounded-lg shadow-lg object-cover"
-            />
-          </div>
-          <div className="relative">
-            <Image
-              src="/1.jpg"
-              alt="mission"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-lg h-[600px] object-cover"
-            />
-          </div>
+        <div className="md:w-1/2 p-4 flex justify-center items-center">
+          <Image
+            src="/special.jpg"
+            alt="mission"
+            width={1000}
+            height={1000}
+            className="rounded-lg shadow-lg object-cover"
+          />
+
         </div>
         <div className="my-auto md:w-1/2 p-4">
           <h1 className="text-2xl md:text-5xl mb-4 font-bold text-[#1850A0]">

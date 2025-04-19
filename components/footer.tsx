@@ -40,13 +40,13 @@ const Footer: React.FC = () => {
               href="mailto:info@transtrade.pk"
               className="text-sm mb-2 block hover:underline"
             >
-              Email: info@transtrade.pk
+              Email: cs@transtrade.pk
             </Link>
             <Link
               href="tel:+922132313030"
               className="text-sm block hover:underline"
             >
-              Phone: (021) 32313030
+              Contact: +92 329 2574256 (WhatsApp)
             </Link>
           </div>
 
@@ -61,21 +61,14 @@ const Footer: React.FC = () => {
                 <Facebook className="hover:text-gray-300 transition" size={24} />
               </Link>
               <Link
-                href="https://www.twitter.com"
-                target="_blank"
-                aria-label="Twitter"
-              >
-                <Twitter className="hover:text-gray-300 transition" size={24} />
-              </Link>
-              <Link
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/transtradesolutions/"
                 target="_blank"
                 aria-label="Instagram"
               >
                 <Instagram className="hover:text-gray-300 transition" size={24} />
               </Link>
               <Link
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/trans-trade-solutions/"
                 target="_blank"
                 aria-label="LinkedIn"
               >
