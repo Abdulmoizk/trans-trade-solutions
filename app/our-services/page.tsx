@@ -1,11 +1,14 @@
 import ScrollToService from "@/components/scrollToService";
 import { shippingServicesData } from "@/data/data";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function ServicesPage() {
     return (
         <main className="overflow-x-hidden">
-            <ScrollToService />
+            <Suspense fallback={null}>
+                <ScrollToService />
+            </Suspense>
             <section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px]">
                 <Image
                     src="/service.jpg"
