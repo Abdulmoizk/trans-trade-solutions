@@ -119,29 +119,27 @@ export default function AboutPage() {
             </section>
 
             {/* Background Expertise Section */}
-            <section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px]">
-                <Image
-                    src="/bg.jpg"
-                    alt="Expertise background"
-                    fill
-                    className="object-cover"
-                    priority
-                    sizes="100vw"
-                />
-                <div className="absolute inset-0 bg-black/60" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-                    <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4">
-                        Expertise & Experience
-                    </h2>
-                    <p className="text-sm sm:text-base lg:text-lg max-w-3xl font-medium leading-relaxed">
-                        With over a decade of industry experience, Trans Trade Solutions boasts a seasoned
-                        team of supply chain professionals with deep expertise across various sectors and
-                        geographies. Our services extend beyond Freight Forwarding to include Customs
-                        Clearance, Inland Transportation, and Indenting. We have the knowledge and
-                        resources to deliver exceptional results.
-                    </p>
-                </div>
-            </section>
+<section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px] bg-black/90">
+    {/* Background Image with Fixed Position */}
+    <div
+        className="absolute inset-0 bg-cover bg-fixed bg-center opacity-30"
+        style={{ backgroundImage: "url('/bg.jpg')" }}
+    />
+    {/* Content */}
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+        <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4">
+            Expertise & Experience
+        </h2>
+        <p className="text-sm sm:text-base lg:text-lg max-w-3xl font-medium leading-relaxed">
+            With over a decade of industry experience, Trans Trade Solutions boasts a seasoned
+            team of supply chain professionals with deep expertise across various sectors and
+            geographies. Our services extend beyond Freight Forwarding to include Customs
+            Clearance, Inland Transportation, and Indenting. We have the knowledge and
+            resources to deliver exceptional results.
+        </p>
+    </div>
+</section>
+
         </main>
     );
 }
