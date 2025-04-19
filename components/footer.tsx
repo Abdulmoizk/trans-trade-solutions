@@ -22,8 +22,9 @@ const Footer: React.FC = () => {
             <ul>
               {[
                 { href: "/", label: "Home" },
-                { href: "/about", label: "About Us" },
-                { href: "/services", label: "Services" },
+                { href: "/our-mission", label: "About Us" },
+                { href: "/our-services", label: "Services" },
+                { href: "/careers", label: "Careers" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href} className="text-sm mb-2 hover:underline">
