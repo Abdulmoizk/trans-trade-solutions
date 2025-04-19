@@ -1,17 +1,18 @@
 import React from "react";
 import { shippingServicesData } from "../data/data";
-import { Truck, Shield, Globe, Search, Layers } from "lucide-react"; 
+import { Truck, Search, Layers, Ship, Calculator, ArrowLeftRight } from "lucide-react"; 
 import Link from "next/link";
 
-type IconType = "Truck" | "Shield" | "Globe" | "Search" | "Layers";
+type IconType = "Truck" | "Shield" | "Globe" | "Search" | "Layers" | "Ship";
 
 const Card = () => {
   const iconMap: Record<IconType, JSX.Element> = {
     Truck: <Truck className="w-12 h-12 text-white" />,
-    Shield: <Shield className="w-12 h-12 text-white" />,
-    Globe: <Globe className="w-12 h-12 text-white" />,
+    Shield: <Calculator className="w-12 h-12 text-white" />,
+    Globe: <ArrowLeftRight className="w-12 h-12 text-white" />,
     Search: <Search className="w-12 h-12 text-white" />,
     Layers: <Layers className="w-12 h-12 text-white" />,
+    Ship: <Ship className="w-12 h-12 text-white" />,
   };
 
   return (

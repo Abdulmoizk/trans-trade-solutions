@@ -6,7 +6,7 @@ const shippingServicesData = [
     img: "/frieght.jpg",
     date: "Available Worldwide",
     shortDescription: "Comprehensive air and sea freight services, tailored to your import/export needs.",
-    icon: "Truck",
+    icon: "Ship",
     content: [
       "We provide comprehensive air and sea freight services for both import and export operations, including inland transportation options.",
       "Our scheduled LCL (Less-than-Container Load) consolidation services ensure cost-effective shipment solutions.",
