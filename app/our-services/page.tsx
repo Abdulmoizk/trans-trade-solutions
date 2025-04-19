@@ -1,9 +1,11 @@
+import ScrollToService from "@/components/scrollToService";
 import { shippingServicesData } from "@/data/data";
 import Image from "next/image";
 
 export default function ServicesPage() {
     return (
         <main className="overflow-x-hidden">
+            <ScrollToService />
             {/* Hero Section */}
             <section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px]">
                 <Image
@@ -31,6 +33,7 @@ export default function ServicesPage() {
 
                 return (
                     <section
+                        id={`service-${item.id}`}
                         key={item.id}
                         className={`flex flex-col-reverse ${isEven ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-10 max-w-7xl px-4 py-20 mx-auto`}
                     >
