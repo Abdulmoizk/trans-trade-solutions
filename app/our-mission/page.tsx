@@ -48,7 +48,7 @@ export default function AboutPage() {
 
                 <div className="w-full md:w-1/2 flex justify-center">
                     <Image
-                        src={"/2.jpg"}
+                        src={"/mission.jpg"}
                         alt={`Overlay mission image`}
                         width={700}
                         height={500}
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
                 <div className="w-full md:w-1/2 flex justify-center">
                     <Image
-                        src={"/2.jpg"}
+                        src={"/core.jpg"}
                         alt={`Overlay mission image`}
                         width={700}
                         height={500}
