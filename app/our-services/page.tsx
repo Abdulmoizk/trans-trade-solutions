@@ -35,7 +35,6 @@ export default function ServicesPage() {
                         key={item.id}
                         className={`flex flex-col-reverse ${isEven ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-10 max-w-7xl px-4 py-20 mx-auto`}
                     >
-                        {/* Text */}
                         <div className="w-full md:w-1/2 space-y-6">
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1850A0]">
                                 {item.title}
@@ -56,8 +55,8 @@ export default function ServicesPage() {
                             <Image
                                 src={item.img || "/fallback.jpg"}
                                 alt={`${item.title} image`}
-                                width={500}
-                                height={400}
+                                width={600}
+                                height={500}
                                 className="rounded-xl shadow-xl object-cover"
                             />
                         </div>
