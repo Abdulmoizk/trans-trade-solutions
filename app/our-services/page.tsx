@@ -6,10 +6,9 @@ export default function ServicesPage() {
     return (
         <main className="overflow-x-hidden">
             <ScrollToService />
-            {/* Hero Section */}
             <section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px]">
                 <Image
-                    src="/bg.jpg"
+                    src="/service.jpg"
                     alt="Expertise background"
                     fill
                     className="object-cover"
@@ -27,7 +26,6 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* Services Sections */}
             {shippingServicesData.map((item, index) => {
                 const isEven = index % 2 === 0;
 
@@ -54,11 +52,9 @@ export default function ServicesPage() {
                             </div>
                         </div>
 
-                        {/* Image */}
                         <div className="w-full md:w-1/2 flex justify-center">
                             <Image
-                                // src={item.img || "/fallback.jpg"}
-                                src="/bg.jpg"
+                                src={item.img || "/fallback.jpg"}
                                 alt={`${item.title} image`}
                                 width={500}
                                 height={400}

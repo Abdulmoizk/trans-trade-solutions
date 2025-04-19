@@ -7,7 +7,7 @@ export default function ContactPage() {
     <main className="overflow-x-hidden">
       <section className="relative w-full h-[100vh] md:h-[500px] lg:h-[600px]">
         <Image
-          src="/bg.jpg"
+          src="/contact.jpg"
           alt="Expertise background"
           fill
           className="object-cover"

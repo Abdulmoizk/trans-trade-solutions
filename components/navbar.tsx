@@ -10,7 +10,6 @@ import ContactInfo from "./ContactInfo";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  // Auto-close mobile dialog when screen goes to md or larger
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && open) {
@@ -24,14 +23,12 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Desktop Navbar */}
       <nav className="hidden md:flex items-center justify-between px-8 py-4 bg-[#1850A0] text-white shadow-md">
         <Logo className="w-16 h-auto" />
         <MenuItems />
         <ContactInfo />
       </nav>
 
-      {/* Mobile Navbar */}
       <nav className="flex md:hidden items-center justify-between px-4 py-3 bg-[#1850A0] text-white shadow-md">
         <Logo className="w-16 h-auto" />
         <Dialog.Root open={open} onOpenChange={setOpen}>

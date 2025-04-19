@@ -3,10 +3,10 @@ const shippingServicesData = [
   {
     id: 1,
     title: "International Freight Forwarding",
-    img: "https://www.example.com/container-ship.jpg",
+    img: "/frieght.jpg",
     date: "Available Worldwide",
     shortDescription: "Comprehensive air and sea freight services, tailored to your import/export needs.",
-    icon: "Truck", // Truck icon for this service
+    icon: "Truck", 
     content: [
       "We provide comprehensive air and sea freight services for both import and export operations, including inland transportation options.",
       "Our scheduled LCL (Less-than-Container Load) consolidation services ensure cost-effective shipment solutions.",
@@ -16,10 +16,10 @@ const shippingServicesData = [
   {
     id: 2,
     title: "Customs Clearance",
-    img: "https://www.example.com/bulk-cargo-ship.jpg",
+    img: "/customsClearance.jpg",
     date: "Available Worldwide",
     shortDescription: "Streamlined customs clearance services to simplify the import/export process.",
-    icon: "Shield", // Shield icon for this service
+    icon: "Shield", 
     content: [
       "Our full customs clearance services streamline the import/export process, including complex entry preparation and timely document handling.",
       "We provide time-definite delivery options with fixed cost estimates to ensure transparency and efficiency.",
@@ -28,10 +28,10 @@ const shippingServicesData = [
   {
     id: 3,
     title: "Inland Transportation",
-    img: "https://www.example.com/ro-ro-ship.jpg",
+    img: "/inlandTransportation.jpg",
     date: "Available Worldwide",
     shortDescription: "Efficient cross-stuffing and transportation services for cargo within local markets.",
-    icon: "Truck", // Truck icon for this service
+    icon: "Truck", 
     content: [
       "We manage cross stuffing of goods efficiently, with access to warehousing and segregation facilities as required.",
       "Our team arranges professional labor and provides forklifts based on the nature and volume of your cargo."
@@ -40,10 +40,10 @@ const shippingServicesData = [
   {
     id: 4,
     title: "International Transit Trade",
-    img: "https://www.example.com/refrigerated-ship.jpg",
+    img: "/transitTrade.jpg",
     date: "Available Worldwide",
     shortDescription: "Cross-border cargo distribution with route surveys and feasibility studies.",
-    icon: "Globe", // Globe icon for this service
+    icon: "Globe", 
     content: [
       "We handle cargo distribution across borders with thorough route surveys and feasibility studies.",
       "Our team supervises cargo throughout loading, unloading, and transit — including OOG projects and heavy load handling."
@@ -52,10 +52,10 @@ const shippingServicesData = [
   {
     id: 5,
     title: "Indenting / Sourcing",
-    img: "https://www.example.com/breakbulk-ship.jpg",
+    img: "/indenting.jpg",
     date: "Available Worldwide",
     shortDescription: "Product sourcing from manufacturers with competitive pricing and quality control.",
-    icon: "Search", // Search icon for this service
+    icon: "Search", 
     content: [
       "We assist in sourcing products directly from manufacturers, ensuring competitive pricing and quality control.",
       "Our experts handle negotiations, provide quotation management, and prepare documentation for smooth clearance at destinations."
@@ -64,10 +64,10 @@ const shippingServicesData = [
   {
     id: 6,
     title: "Project Cargo Management",
-    img: "https://www.example.com/breakbulk-ship.jpg",
+    img: "/projectCargo.jpg",
     date: "Available Worldwide",
     shortDescription: "Specialized handling of heavy machinery and Out of Gauge (OOG) cargo.",
-    icon: "Layers", // Layers icon for this service
+    icon: "Layers", 
     content: [
       "We specialize in handling OOG (Out of Gauge) and heavy machinery cargo using flat rack equipment and other advanced solutions.",
       "Our logistics experts coordinate cross stuffing of CBUs and partner with experienced handlers to ensure safety and compliance."
@@ -76,10 +76,10 @@ const shippingServicesData = [
   {
     id: 7,
     title: "Afghan & CIS Transit Trade",
-    img: "https://www.example.com/ro-ro-ship.jpg",
+    img: "/transitTrade.jpg",
     date: "Available Worldwide",
     shortDescription: "Reliable cross-border distribution to Afghanistan and CIS regions.",
-    icon: "Globe", // Globe icon for this service
+    icon: "Globe", 
     content: [
       "We provide reliable cross-border distribution to Afghanistan and CIS regions, supported by extensive route planning.",
       "Cargo is supervised throughout the journey, with expertise in handling heavy and OOG shipments with care."
