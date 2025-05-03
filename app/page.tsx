@@ -6,8 +6,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
-      <div className="relative">
-        <div className="relative w-screen h-screen md:h-[500px] lg:h-[600px]">
+      <div className="relative mt-[80px] sm:mt-[100px] lg:mt-[120px]">
+        <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]">
           <Image
             src="/main.jpg"
             alt="background"
@@ -17,22 +17,26 @@ export default function Home() {
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-black opacity-60"></div>
+
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-          <h1 className="text-4xl md:text-8xl font-bold mb-4">Shipping</h1>
-          <h2 className="text-2xl md:text-5xl mb-3 font-bold">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            Shipping
+          </h1>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
             We handle giants of the world
           </h2>
-          <p className="text-lg md:text-sm max-w-80 font-bold">
-            With a global network and advanced logistics solutions, our freight
-            services provide.
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl font-bold">
+            With a global network and advanced logistics solutions, our freight services provide.
           </p>
         </div>
       </div>
 
+
       <div className="flex flex-col md:flex-row items-center md:items-start mx-auto max-w-7xl p-4 pt-24">
         <div className="my-auto md:w-1/2 p-4">
-          <h1 className="text-4xl md:text-7xl text-[#1850A0] font-bold mb-4">
+          <h1 className="text-4xl md:text-7xl text-[#ED2228] font-bold mb-4">
             Our Mission
           </h1>
           <p className="text-2xl md:text-4xl mb-3 font-bold">
@@ -40,7 +44,7 @@ export default function Home() {
             logistics solutions, recognized for our innovation, reliability, and
             commitment to sustainability. We strive to seamlessly connect...
           </p>
-          <Link href="/our-mission" className="mt-4 px-4 py-2 bg-[#1850A0] text-white">
+          <Link href="/our-mission" className="mt-4 px-4 py-2 bg-[#ED2228] text-white">
             More Details
           </Link>
         </div>
@@ -58,7 +62,7 @@ export default function Home() {
       <div className="m-5" />
 
       <div className="mx-auto max-w-7xl sm:p-4 pt-24">
-        <h1 className="text-4xl md:text-7xl text-center text-[#1850A0] font-bold mb-4">
+        <h1 className="text-4xl md:text-7xl text-center text-[#fff] font-bold mb-4">
           Our Services
         </h1>
         <p className="text-xl text-center md:text-3xl mb-3 font-semibold">We provide a complete platform of service innovative, sustainable and
@@ -79,7 +83,7 @@ export default function Home() {
 
         </div>
         <div className="my-auto md:w-1/2 p-4">
-          <h1 className="text-2xl md:text-5xl mb-4 font-bold text-[#1850A0]">
+          <h1 className="text-2xl md:text-5xl mb-4 font-bold text-[#fff]">
             What Makes Us Special
           </h1>
           {specialFeaturesData.map((item) => (

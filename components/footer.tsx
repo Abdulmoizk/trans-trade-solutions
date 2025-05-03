@@ -1,87 +1,104 @@
 import React from "react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
-import { Logo } from "@/common/media/icons/trans-trade";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#1850A0] text-white py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-          <div>
-            <div className="flex justify-center md:justify-start">
-              <Logo className="size-28 text-white" />
+    <footer className="relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-[url('/bg.jpg')] bg-cover bg-center bg-no-repeat"
+        style={{ zIndex: 0 }}
+      ></div>
+
+      <div className="relative z-10 bg-white/80 backdrop-blur-sm py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+              <div className="flex justify-center md:justify-start">
+                <Link href="/">
+                  <Image
+                    src="/Logo.svg"
+                    alt="TransTradeSolutions"
+                    width={112}
+                    height={112}
+                    className="w-28 h-auto"
+                    priority
+                  />
+                </Link>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-[#ED2228]">Quick Links</h3>
+              <ul>
+                {[
+                  { href: "/", label: "Home" },
+                  { href: "/our-mission", label: "About Us" },
+                  { href: "/our-services", label: "Services" },
+                  { href: "/careers", label: "Careers" },
+                  { href: "/contact", label: "Contact" },
+                ].map((link) => (
+                  <li key={link.href} className="text-sm mb-2 hover:underline">
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-[#ED2228]">Contact Us</h3>
+              <p className="text-sm mb-2">
+                Suite No. L-311, 4th Floor, Marine Centre, Block 2, Clifton, Karachi, Pakistan
+              </p>
+              <Link
+                href="mailto:info@transtrade.pk"
+                className="text-sm mb-2 block hover:underline"
+              >
+                Email: cs@transtrade.pk
+              </Link>
+              <Link
+                href="tel:+922132313030"
+                className="text-sm block hover:underline"
+              >
+                Contact: +92 329 2574256 (WhatsApp)
+              </Link>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-3 text-[#ED2228]">Follow Us</h3>
+              <div className="flex justify-center md:justify-start space-x-4 ">
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61559347383483"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="hover:text-gray-300 transition" size={24} />
+                </Link>
+                <Link
+                  href="https://www.instagram.com/transtradesolutions/"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="hover:text-gray-300 transition" size={24} />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/company/trans-trade-solutions/"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="hover:text-gray-300 transition" size={24} />
+                </Link>
+              </div>
             </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-            <ul>
-              {[
-                { href: "/", label: "Home" },
-                { href: "/our-mission", label: "About Us" },
-                { href: "/our-services", label: "Services" },
-                { href: "/careers", label: "Careers" },
-                { href: "/contact", label: "Contact" },
-              ].map((link) => (
-                <li key={link.href} className="text-sm mb-2 hover:underline">
-                  <Link href={link.href}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
+          <div className="mt-10 border-t border-white/20 pt-4 text-center text-sm ">
+            &copy; 2024 Trans Trade Solutions. All rights reserved.
           </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
-            <p className="text-sm mb-2">
-              Suite No. L-311, 4th Floor, Marine Centre, Block 2, Clifton, Karachi, Pakistan
-            </p>
-            <Link
-              href="mailto:info@transtrade.pk"
-              className="text-sm mb-2 block hover:underline"
-            >
-              Email: cs@transtrade.pk
-            </Link>
-            <Link
-              href="tel:+922132313030"
-              className="text-sm block hover:underline"
-            >
-              Contact: +92 329 2574256 (WhatsApp)
-            </Link>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
-            <div className="flex justify-center md:justify-start space-x-4">
-              <Link
-                href="https://www.facebook.com/profile.php?id=61559347383483"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <Facebook className="hover:text-gray-300 transition" size={24} />
-              </Link>
-              <Link
-                href="https://www.instagram.com/transtradesolutions/"
-                target="_blank"
-                aria-label="Instagram"
-              >
-                <Instagram className="hover:text-gray-300 transition" size={24} />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/company/trans-trade-solutions/"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="hover:text-gray-300 transition" size={24} />
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-10 border-t border-white/20 pt-4 text-center text-sm">
-          &copy; 2024 Trans Trade Solutions. All rights reserved.
         </div>
       </div>
+
     </footer>
   );
 };

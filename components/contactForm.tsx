@@ -76,7 +76,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 bg-gray-100 p-8 rounded-xl shadow-lg">
-      <h2 className="text-xl font-bold text-[#1850A0]">SEND US AN EMAIL</h2>
+      <h2 className="text-xl font-bold text-[#ED2228]">SEND US AN EMAIL</h2>
       <p className="text-sm text-gray-600">
         For any query, please feel free to contact us by filling up the below
         mandatory fields and someone from our office shall contact you soon.
@@ -189,7 +189,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className={`bg-[#1850A0] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#143d7a] transition ${
+        className={`bg-[#ED2228] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#143d7a] transition ${
           status === "loading" ? "opacity-50 cursor-not-allowed" : ""
         }`}
         disabled={status === "loading"}
