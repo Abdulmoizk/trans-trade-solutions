@@ -80,31 +80,31 @@ const specialFeaturesData = [
   {
     id: 1,
     title: "Global Coverage",
-    img: <Globe size={56} strokeWidth={0.5} className="text-[#1850A0] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
+    img: <Globe size={56} strokeWidth={0.5} className="text-[#ED2228] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
     desc: "Our shipping network spans across all major trade routes, ensuring that your cargo reaches its destination, no matter where in the world."
   },
   {
     id: 2,
     title: "Advanced Technology",
-    img: <Cpu size={56} strokeWidth={0.5} className="text-[#1850A0] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
+    img: <Cpu size={56} strokeWidth={0.5} className="text-[#ED2228] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
     desc: "We leverage cutting-edge tracking systems and AI-driven logistics to provide real-time updates and optimized shipping routes for faster, more efficient delivery."
   },
   {
     id: 3,
     title: "Eco-Friendly Solutions",
-    img: <Leaf size={56} strokeWidth={0.5} className="text-[#1850A0] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
+    img: <Leaf size={56} strokeWidth={0.5} className="text-[#ED2228] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
     desc: "Committed to sustainability, we offer eco-friendly shipping options with reduced carbon emissions, helping businesses meet their environmental goals."
   },
   {
     id: 4,
     title: "Safety and Security",
-    img: <Shield size={56} strokeWidth={0.5} className="text-[#1850A0] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
+    img: <Shield size={56} strokeWidth={0.5} className="text-[#ED2228] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
     desc: "With industry-leading safety protocols, our shipping services ensure that your cargo is handled with the utmost care, minimizing risks during transit."
   },
   {
     id: 5,
     title: "24/7 Customer Support",
-    img: <Headset size={56} strokeWidth={0.5} className="text-[#1850A0] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
+    img: <Headset size={56} strokeWidth={0.5} className="text-[#ED2228] sm:size-[56px] md:size-[64px] lg:size-[80px]" />,
     desc: "Our dedicated support team is available around the clock to address any concerns, provide updates, and offer solutions for all your shipping needs."
   }
 ];

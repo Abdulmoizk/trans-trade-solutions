@@ -24,7 +24,7 @@ export async function POST(req: Request) {
         
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong></p>
-        <div style="padding: 10px; background-color: #f9f9f9; border-left: 3px solid #1850A0;">
+        <div style="padding: 10px; background-color: #f9f9f9; border-left: 3px solid #ED2228;">
           <p>${message}</p>
         </div>
         
