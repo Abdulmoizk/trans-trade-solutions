@@ -5,7 +5,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { X as CloseIcon, AlignJustify as MenuIcon } from "lucide-react";
 import { Logo } from "@/common/media/icons/trans-trade";
 import MenuItems from "./MenuItems";
-import ContactInfo from "./ContactInfo";
+import AnimatedDialog from "./ui/animatedDialog";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -23,44 +23,41 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="hidden md:flex items-center justify-between px-8 py-4 bg-[#1850A0] text-white shadow-md">
+      <nav className="hidden lg:flex items-center justify-between px-8 py-4 bg-[#1850A0] text-white shadow-md">
         <Logo className="w-16 h-auto" />
         <MenuItems />
-        <ContactInfo />
       </nav>
 
-      <nav className="flex md:hidden items-center justify-between px-4 py-3 bg-[#1850A0] text-white shadow-md">
+      <nav className="flex lg:hidden items-center justify-between px-4 py-3 bg-[#1850A0] text-white shadow-md">
         <Logo className="w-16 h-auto" />
         <Dialog.Root open={open} onOpenChange={setOpen}>
-          <Dialog.Trigger asChild>
-            <button aria-label="Open menu" className="text-white focus:outline-none">
-              <MenuIcon size={28} />
-            </button>
+          <Dialog.Trigger
+            aria-label="Open menu"
+            className="text-white focus:outline-none"
+          >
+            <MenuIcon size={28} />
           </Dialog.Trigger>
 
           <Dialog.Portal>
-            <Dialog.Overlay className="fixed inset-0 bg-black/70 z-40 backdrop-blur-sm transition-opacity duration-300" />
-            <Dialog.Content
-              className="fixed inset-0 z-50 bg-[#0f172a] text-white px-6 py-8 overflow-y-auto transition-transform duration-300 transform animate-slide-in-right"
-              onPointerDownOutside={() => setOpen(false)}
-              onEscapeKeyDown={() => setOpen(false)}
-            >
+            <Dialog.Overlay
+              className="fixed inset-0 bg-black opacity-50"
+              onClick={() => setOpen(false)}
+            />
+            <AnimatedDialog isOpen={open} onClose={() => setOpen(false)}>
               <div className="flex justify-between items-center mb-6">
                 <Logo className="w-16 h-auto" />
-                <button
+                <Dialog.Close
                   className="text-white focus:outline-none"
-                  onClick={() => setOpen(false)}
                   aria-label="Close menu"
                 >
                   <CloseIcon size={28} />
-                </button>
+                </Dialog.Close>
               </div>
 
               <div className="flex flex-col space-y-10 items-center justify-center mt-10 text-lg">
-                <MenuItems />
-                <ContactInfo />
+                <MenuItems onClick={() => setOpen(false)} />
               </div>
-            </Dialog.Content>
+            </AnimatedDialog>
           </Dialog.Portal>
         </Dialog.Root>
       </nav>
