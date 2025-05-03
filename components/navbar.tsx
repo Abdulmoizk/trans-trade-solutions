@@ -23,12 +23,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="hidden lg:flex items-center justify-between px-8 py-4 bg-[#1850A0] text-white shadow-md">
+      <nav className="hidden sm:flex items-center justify-between px-8 py-4 bg-[#1850A0] text-white shadow-md">
         <Logo className="w-16 h-auto" />
         <MenuItems />
       </nav>
 
-      <nav className="flex lg:hidden items-center justify-between px-4 py-3 bg-[#1850A0] text-white shadow-md">
+      <nav className="flex sm:hidden items-center justify-between px-4 py-3 bg-[#1850A0] text-white shadow-md">
         <Logo className="w-16 h-auto" />
         <Dialog.Root open={open} onOpenChange={setOpen}>
           <Dialog.Trigger
