@@ -36,7 +36,7 @@ const AnimatedDialog: React.FC<AnimatedDialogProps> = ({
   return (
     <Dialog.Content
       {...props}
-      className={`fixed inset-0 z-50 bg-[#fff] text-white px-6 py-8 overflow-y-auto transition-transform transform ${animationClass}`}
+      className={`fixed inset-0 z-50 bg-white text-gray-900 px-6 py-8 overflow-y-auto transition-transform transform ${animationClass}`}
       onPointerDownOutside={onClose}
       onEscapeKeyDown={onClose}
     >

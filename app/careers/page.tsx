@@ -1,113 +1,150 @@
 import Image from "next/image";
 
 export default function CareersPage() {
+    const benefits = [
+        {
+            title: "Work Environment",
+            description: "At Trans Trade Solutions, we offer our employees a vibrant, diverse, and friendly work environment where professional growth and career advancement are our top priorities. The expertise of our teams is at the heart of our success."
+        },
+        {
+            title: "Culture",
+            description: "We foster a workplace where management values input, celebrates events, welcomes newcomers, and creates a fun, collaborative atmosphere. We care about each individual and their well-being."
+        },
+        {
+            title: "Learning & Development",
+            description: "We prioritize the growth and success of our employees. Our commitment to ongoing learning and development helps foster a culture that esteems expertise and promotes innovation."
+        },
+        {
+            title: "Diversity & Inclusion",
+            description: "We embrace diversity and inclusion, fostering a culture where every voice is heard and every perspective is respected. Our commitment is to create a workplace that reflects a variety of backgrounds and experiences."
+        },
+        {
+            title: "Compensation & Benefits",
+            description: "We offer a fair and transparent compensation structure that aligns with your role and performance. Your compensation package will reflect your responsibilities, the effectiveness with which you fulfill them, and the value you bring to the company."
+        },
+        {
+            title: "Job Openings",
+            description: "Trans Trade Solutions offers diverse career opportunities across various levels in logistics and international freight forwarding. We have openings in Supply Chain, Documentation, Consolidation, Customer Services, and more. Our Trainee Development Program trains fresh graduates to become logistics experts."
+        }
+    ];
+
     return (
-        <main className="overflow-x-hidden">
-            <div className="relative w-full bg-black mt-[72px] sm:mt-[80px]">
-                <div className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[650px] lg:min-h-[700px] overflow-hidden">
-                    <Image
-                        src="/career.jpg"
-                        alt="Careers background"
-                        fill
-                        className="object-cover animate-ken-burns"
-                        priority
-                        sizes="100vw"
-                    />
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 py-8 sm:py-12 md:py-16">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-                            Join Trans Trade Solutions
+        <div className="overflow-x-hidden bg-white">
+            {/* Modern Hero Section */}
+            <section className="relative w-full mt-[120px] sm:mt-[128px] min-h-[60vh] flex items-center bg-gradient-to-br from-gray-50 via-white to-gray-50">
+                <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#ED2228]/5 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#ED2228]/5 rounded-full blur-3xl"></div>
+                </div>
+                
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                    <div className="text-center max-w-4xl mx-auto space-y-8">
+                        <div className="inline-block px-4 py-2 bg-[#ED2228]/10 rounded-full border border-[#ED2228]/20">
+                            <span className="text-sm font-semibold text-[#ED2228] uppercase tracking-wider">Careers</span>
+                        </div>
+                        
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-gray-900 leading-none tracking-tight">
+                            Join Trans Trade
+                            <span className="block text-[#ED2228] mt-2">Solutions</span>
                         </h1>
-                        <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl font-bold">
+                        
+                        <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                             At Trans Trade Solutions, your contribution truly makes a difference. Explore exciting career opportunities with us and help shape the future of logistics and international freight forwarding.
                         </p>
                     </div>
                 </div>
-            </div>
-
-            <section className="py-20 px-4 max-w-7xl mx-auto">
-                <div className="text-center space-y-8">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ED2228]">
-                        NO MATTER WHAT YOU DO, YOUR CONTRIBUTION MAKES A DIFFERENCE
-                    </h2>
-                    <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed max-w-4xl mx-auto">
-                        Trans Trade Solutions has been a leader in the logistics industry for many years. We consistently strive to conduct our business ethically and recognize that our products and services have a positive impact on society and the global market.
-                    </p>
-                </div>
             </section>
 
-            <section className="bg-gray-50 py-20 px-4">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-[#ED2228] mb-16">
-                        Why Work with Trans Trade Solutions?
-                    </h2>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-6">
-                            <h3 className="text-2xl font-semibold text-[#ED2228]">Work Environment</h3>
-                            <p className="text-lg text-gray-700 leading-relaxed">
-                                At Trans Trade Solutions, we offer our employees a vibrant, diverse, and friendly work environment where professional growth and career advancement are our top priorities. The expertise of our teams is at the heart of our success.
-                            </p>
+            {/* Impact Section */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-[#ED2228]/5 rounded-full blur-3xl"></div>
+                
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-4xl mx-auto space-y-8">
+                        <div className="inline-block px-4 py-2 bg-[#ED2228]/10 rounded-full border border-[#ED2228]/20">
+                            <span className="text-sm font-semibold text-[#ED2228] uppercase tracking-wider">Impact</span>
                         </div>
-
-                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-6">
-                            <h3 className="text-2xl font-semibold text-[#ED2228]">Culture</h3>
-                            <p className="text-lg text-gray-700 leading-relaxed">
-                                We foster a workplace where management values input, celebrates events, welcomes newcomers, and creates a fun, collaborative atmosphere. We care about each individual and their well-being.
-                            </p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-6">
-                            <h3 className="text-2xl font-semibold text-[#ED2228]">Learning & Development</h3>
-                            <p className="text-lg text-gray-700 leading-relaxed">
-                                We prioritize the growth and success of our employees. Our commitment to ongoing learning and development helps foster a culture that esteems expertise and promotes innovation.
-                            </p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-6">
-                            <h3 className="text-2xl font-semibold text-[#ED2228]">Diversity & Inclusion</h3>
-                            <p className="text-lg text-gray-700 leading-relaxed">
-                                We embrace diversity and inclusion, fostering a culture where every voice is heard and every perspective is respected. Our commitment is to create a workplace that reflects a variety of backgrounds and experiences.
-                            </p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-6">
-                            <h3 className="text-2xl font-semibold text-[#ED2228]">Compensation & Benefits</h3>
-                            <p className="text-lg text-gray-700 leading-relaxed">
-                                We offer a fair and transparent compensation structure that aligns with your role and performance. Your compensation package will reflect your responsibilities, the effectiveness with which you fulfill them, and the value you bring to the company.
-                            </p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-6">
-                            <h3 className="text-2xl font-semibold text-[#ED2228]">Job Openings</h3>
-                            <p className="text-lg text-gray-700 leading-relaxed">
-                                Trans Trade Solutions offers diverse career opportunities across various levels in logistics and international freight forwarding. We have openings in Supply Chain, Documentation, Consolidation, Customer Services, and more. Our Trainee Development Program trains fresh graduates to become logistics experts.
-                            </p>
-                        </div>
+                        
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
+                            Your Contribution
+                            <span className="block text-[#ED2228]">Makes a Difference</span>
+                        </h2>
+                        
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                            Trans Trade Solutions has been a leader in the logistics industry for many years. We consistently strive to conduct our business ethically and recognize that our products and services have a positive impact on society and the global market.
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <section className="py-32 text-white text-center relative bg-black/90">
-                <div
-                    className="absolute inset-0 bg-cover bg-fixed bg-center opacity-30"
-                    style={{ backgroundImage: "url('/careerbg.jpg')" }}
-                />
-                <div className="relative z-10 max-w-4xl mx-auto px-4">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8">
-                        Ready to Make a Difference?
-                    </h2>
-                    <p className="text-lg sm:text-xl lg:text-2xl mb-12 text-gray-200">
-                        If you have the skills and passion to join our team, we&apos;d love to hear from you.
-                    </p>
-                    <a
-                        href="mailto:hr@transtrade.pk"
-                        className="inline-block px-8 py-4 bg-[#ED2228] text-white text-lg font-semibold rounded-full hover:bg-[#c01f2e] transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                    >
-                        Submit Your Resume
-                    </a>
+            {/* Benefits Grid */}
+            <section className="py-24 bg-gray-50 relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#ED2228]/5 rounded-full blur-3xl"></div>
+                
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <div className="inline-block px-4 py-2 bg-[#ED2228]/10 rounded-full border border-[#ED2228]/20 mb-6">
+                            <span className="text-sm font-semibold text-[#ED2228] uppercase tracking-wider">Why Work With Us</span>
+                        </div>
+                        
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                            Why Work with
+                            <span className="block text-[#ED2228]">Trans Trade Solutions?</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {benefits.map((benefit, index) => (
+                            <div 
+                                key={index}
+                                className="group p-8 bg-white rounded-2xl border-2 border-gray-200 hover:border-[#ED2228] hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                            >
+                                <h3 className="text-2xl font-black text-[#ED2228] mb-4">{benefit.title}</h3>
+                                <p className="text-lg text-gray-600 leading-relaxed">
+                                    {benefit.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
-        </main>
+
+            {/* CTA Section */}
+            <section className="relative w-full min-h-[500px] bg-gradient-to-br from-[#ED2228] to-[#c01f2e] overflow-hidden">
+                <div className="absolute inset-0 opacity-20">
+                    <Image
+                        src="/careerbg.jpg"
+                        alt="Background"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+                <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 py-24 min-h-[500px]">
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-md rounded-full border border-white/30">
+                            <span className="text-sm font-semibold text-white uppercase tracking-wider">Join Us</span>
+                        </div>
+                        
+                        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+                            Ready to Make a Difference?
+                        </h2>
+                        
+                        <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                            If you have the skills and passion to join our team, we&apos;d love to hear from you.
+                        </p>
+                        
+                        <a
+                            href="mailto:hr@transtrade.pk"
+                            className="inline-flex items-center gap-2 px-10 py-4 bg-white text-[#ED2228] text-lg font-black rounded-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 mt-4"
+                        >
+                            Submit Your Resume
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 }

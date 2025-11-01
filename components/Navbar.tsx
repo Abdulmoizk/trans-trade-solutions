@@ -31,7 +31,7 @@ const Navbar = () => {
     };
   }, [open]);
 
-  const navClasses = `fixed top-8 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/30 backdrop-blur-md shadow-md" : "bg-[#fff] backdrop-blur-md shadow-md"}`;
+  const navClasses = `fixed top-12 left-4 right-4 max-w-7xl mx-auto z-50 transition-all duration-300 ${scrolled ? "bg-white/98 backdrop-blur-xl shadow-2xl border border-gray-200" : "bg-white/95 backdrop-blur-md shadow-lg border border-gray-100"}`;
 
   return (
     <>
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className={`hidden sm:flex items-center justify-between px-8 ${navClasses}`}>
+      <nav className={`hidden sm:flex items-center justify-between px-6 md:px-8 lg:px-10 rounded-2xl ${navClasses}`}>
         <Link href="/" className="hover:opacity-90 transition-opacity">
           <Image
             src="/Logo.svg"
@@ -52,18 +52,18 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6 lg:gap-8">
           <MenuItems />
           <Link 
             href="/contact" 
-            className="px-6 py-2 bg-[#ED2228] text-white rounded-full hover:bg-[#c01f2e] transition-colors duration-300 font-medium"
+            className="px-6 py-2.5 bg-[#ED2228] text-white rounded-full hover:bg-[#c01f2e] transition-all duration-300 font-semibold text-sm shadow-lg hover:shadow-xl hover:scale-105"
           >
             Get a Quote
           </Link>
         </div>
       </nav>
 
-      <nav className={`flex sm:hidden items-center justify-between px-4 py-2 ${navClasses}`}>
+      <nav className={`flex sm:hidden items-center justify-between px-4 py-3 rounded-xl ${navClasses}`}>
         <Link href="/" className="hover:opacity-90 transition-opacity">
           <Image
             src="/Logo.svg"
@@ -77,7 +77,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <Link 
             href="/contact" 
-            className="px-4 py-1.5 bg-[#ED2228] text-white rounded-full hover:bg-[#c01f2e] transition-colors duration-300 text-sm font-medium"
+            className="px-4 py-2 bg-[#ED2228] text-white rounded-full hover:bg-[#c01f2e] transition-all duration-300 text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105"
           >
             Get Quote
           </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
             <Dialog.Trigger
               aria-label="Open menu"
               aria-expanded={open ? "true" : "false"} 
-              className="text-[#ED2228] transition-all duration-300 focus:outline-none"
+              className="text-[#ED2228] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ED2228] focus-visible:ring-offset-2 rounded-lg p-1"
             >
               <MenuIcon size={28} />
             </Dialog.Trigger>
@@ -108,7 +108,7 @@ const Navbar = () => {
                     />
                   </Link>
                   <Dialog.Close
-                    className="text-[#ED2228] transition-all duration-300 focus:outline-none"
+                    className="text-[#ED2228] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ED2228] focus-visible:ring-offset-2 rounded-lg p-1"
                     aria-label="Close menu"
                   >
                     <CloseIcon size={28} />

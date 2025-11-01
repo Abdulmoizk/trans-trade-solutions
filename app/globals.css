@@ -8,13 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -87,5 +80,32 @@ body {
     100% {
       transform: scale(1) translate(0, 0);
     }
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out;
+  }
+}
+
+/* Global Focus Styles for Accessibility */
+@layer base {
+  *:focus-visible {
+    @apply outline-none ring-2 ring-[#ED2228] ring-offset-2;
+  }
+  
+  /* Skip to main content link */
+  .skip-to-main {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#ED2228] focus:text-white focus:rounded-lg focus:font-bold;
   }
 }
