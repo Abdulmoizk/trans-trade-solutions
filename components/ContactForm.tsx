@@ -189,7 +189,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className={`bg-[#ED2228] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#143d7a] transition ${
+        className={`bg-[#ED2228] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#c01f2e] transition ${
           status === "loading" ? "opacity-50 cursor-not-allowed" : ""
         }`}
         disabled={status === "loading"}

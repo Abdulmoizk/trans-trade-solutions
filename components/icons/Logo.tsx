@@ -1,8 +1,10 @@
-// components/Icon.jsx
 import React from "react";
-import PropTypes from "prop-types";
 
-export const Logo = ({ className }: { className?: string }) => (
+interface LogoProps {
+  className?: string;
+}
+
+export const Logo: React.FC<LogoProps> = ({ className }) => (
   <svg
     version="1.0"
     xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +17,7 @@ export const Logo = ({ className }: { className?: string }) => (
   >
     <g
       transform="translate(0.000000,761.000000) scale(0.100000,-0.100000)"
-      fill="cuurentColor"
+      fill="currentColor"
       stroke="none"
     >
       <path
@@ -163,3 +165,4 @@ c-3 -16 -8 -46 -12 -68 -3 -22 -17 -87 -30 -144 -12 -58 -21 -108 -18 -112 2
     </g>
   </svg>
 );
+

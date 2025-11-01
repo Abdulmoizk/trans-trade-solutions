@@ -8,21 +8,21 @@ const shippingServicesData = [
     shortDescription: "Comprehensive air and sea freight services, tailored to your import/export needs.",
     icon: "Ship",
     content: [
-      "We provide comprehensive air and sea freight services for both import and export operations, including inland transportation options.",
-      "Our scheduled LCL (Less-than-Container Load) consolidation services ensure cost-effective shipment solutions.",
-      "We offer Ex-Work and door-to-door delivery options tailored to your needs, along with seamless DDU/DDP shipment handling."
+      "We offer comprehensive air and sea freight services for both import and export operations.",
+      "Our scheduled LCL (Less-than-Container Load) consolidation services provide cost-effective and reliable shipping solutions.",
+      "We also specialize in Ex-Works and door-to-door deliveries, tailored to meet your specific requirements, with smooth handling of DDU (Delivered Duty Unpaid) and DDP (Delivered Duty Paid) shipments."
     ],
   },
   {
     id: 2,
-    title: "Customs Clearance",
+    title: "Customs Clearance Services",
     img: "/customsClearance.jpg",
     date: "Available Worldwide",
     shortDescription: "Streamlined customs clearance services to simplify the import/export process.",
     icon: "Shield",
     content: [
-      "Our full customs clearance services streamline the import/export process, including complex entry preparation and timely document handling.",
-      "We provide time-definite delivery options with fixed cost estimates to ensure transparency and efficiency.",
+      "Our end-to-end customs clearance solutions simplify the import and export process by expertly managing complex declarations and ensuring timely handling of all required documentation.",
+      "We offer time-definite delivery options to support efficient logistics planning and reliable cargo movement."
     ],
   },
   {
@@ -33,8 +33,8 @@ const shippingServicesData = [
     shortDescription: "Efficient cross-stuffing and transportation services for cargo within local markets.",
     icon: "Truck",
     content: [
-      "We manage cross stuffing of goods efficiently, with access to warehousing and segregation facilities as required.",
-      "Our team arranges professional labor and provides forklifts based on the nature and volume of your cargo."
+      "We provide efficient inland transportation solutions, including cross-stuffing operations and access to warehousing and cargo segregation facilities when needed.",
+      "Our team ensures the provision of appropriate handling resources, including professional labor and forklifts, based on the specific cargo requirements. We also specialize in the transport of heavy cargo and industrial machinery, utilizing specialized vehicles and equipment for safe and reliable delivery."
     ],
   },
   {
@@ -45,20 +45,20 @@ const shippingServicesData = [
     shortDescription: "Cross-border cargo distribution with route surveys and feasibility studies.",
     icon: "Globe",
     content: [
-      "We handle cargo distribution across borders with thorough route surveys and feasibility studies.",
-      "Our team supervises cargo throughout loading, unloading, and transit — including OOG projects and heavy load handling."
+      "We specialize in managing cross-border cargo movements, including down transit, with a strong focus on Afghanistan, Uzbekistan, and all CIS and landlocked countries.",
+      "Our services include detailed route surveys and feasibility studies to ensure safe, compliant, and efficient transit operations."
     ],
   },
   {
     id: 5,
-    title: "Indenting / Sourcing",
+    title: "Indenting & Sourcing",
     img: "/indenting.jpg",
     date: "Available Worldwide",
     shortDescription: "Product sourcing from manufacturers with competitive pricing and quality control.",
     icon: "Search",
     content: [
-      "We assist in sourcing products directly from manufacturers, ensuring competitive pricing and quality control.",
-      "Our experts handle negotiations, provide quotation management, and prepare documentation for smooth clearance at destinations."
+      "We facilitate direct sourcing from trusted manufacturers, ensuring competitive pricing, product reliability, and strict quality control.",
+      "Our team manages the entire procurement process, including supplier negotiations, quotation handling, and preparation of complete documentation to ensure smooth and timely clearance at destination ports."
     ],
   },
   {
@@ -69,8 +69,8 @@ const shippingServicesData = [
     shortDescription: "Specialized handling of heavy machinery and Out of Gauge (OOG) cargo.",
     icon: "Layers",
     content: [
-      "We specialize in handling OOG (Out of Gauge) and heavy machinery cargo using flat rack equipment and other advanced solutions.",
-      "Our logistics experts coordinate cross stuffing of CBUs and partner with experienced handlers to ensure safety and compliance."
+      "We specialize in the handling of Out-of-Gauge (OOG) and heavy machinery cargo, utilizing flat racks and other specialized equipment to ensure secure and efficient transport.",
+      "Our logistics team expertly coordinates cross-stuffing of Complete Built Units (CBUs) and collaborates with experienced partners to maintain the highest standards of safety, precision, and regulatory compliance."
     ],
   },
 ];

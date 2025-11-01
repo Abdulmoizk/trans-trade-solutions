@@ -1,16 +1,16 @@
-import ContactForm from "@/components/contactForm";
+import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 
 export default function ContactPage() {
   return (
     <main className="overflow-x-hidden">
       <div className="relative w-full bg-black mt-[72px] sm:mt-[80px]">
-        <div className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[650px] lg:min-h-[700px]">
+        <div className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[650px] lg:min-h-[700px] overflow-hidden">
           <Image
             src="/contact.jpg"
             alt="Contact background"
             fill
-            className="object-cover"
+            className="object-cover animate-ken-burns"
             priority
             sizes="100vw"
           />
@@ -20,7 +20,7 @@ export default function ContactPage() {
               Get in Touch with Us
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl font-medium text-gray-200">
-              Have any questions or need more information? We are here to assist you with all your inquiries. Feel free to reach out to us using the contact form below.
+              Have questions or need more information? Our team is here to help. You can reach out to us using the contact form below or directly via email at cs@transtrade.pk. We're ready to assist you with all your inquiries promptly and professionally.
             </p>
           </div>
         </div>
