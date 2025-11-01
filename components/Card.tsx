@@ -16,37 +16,52 @@ const Card = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {shippingServicesData.map((item) => (
         <div
           key={item.id}
-          className="relative h-[420px] w-full rounded-xl overflow-hidden group shadow-lg hover:shadow-xl transition-all duration-300"
+          className="group relative bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-[#ED2228] transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-            style={{ backgroundImage: `url('${item.img}')` }}
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 z-10 transition-all duration-300 group-hover:from-black/80 group-hover:via-black/70 group-hover:to-black/90" />
-
-          <div className="relative z-20 flex flex-col justify-between h-full p-8 text-white">
-            <div className="flex flex-col items-center justify-center flex-grow text-center gap-6">
-              <div className="p-4 bg-[#ED2228]/90 rounded-full group-hover:bg-[#ED2228] transition-colors duration-300">
+          {/* Image Section */}
+          <div className="relative h-64 overflow-hidden">
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+              style={{ backgroundImage: `url('${item.img}')` }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            
+            {/* Icon Overlay */}
+            <div className="absolute top-6 left-6">
+              <div className="w-14 h-14 bg-[#ED2228] rounded-xl flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                 {iconMap[item.icon as IconType]}
               </div>
-
-              <h2 className="text-2xl font-bold leading-snug">{item.title}</h2>
-
-              <p className="text-base font-medium text-gray-200">{item.shortDescription}</p>
-
-              <Link 
-                href={`/our-services?service=${item.id}`} 
-                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-[#ED2228] rounded-full hover:bg-[#c01f2e] transition-all duration-300 hover:scale-105 hover:shadow-lg"
-              >
-                Learn More
-              </Link>
+            </div>
+            
+            {/* Title Overlay */}
+            <div className="absolute bottom-6 left-6 right-6">
+              <h3 className="text-2xl font-black text-white leading-tight">{item.title}</h3>
             </div>
           </div>
+          
+          {/* Content Section */}
+          <div className="p-6 space-y-4">
+            <p className="text-gray-600 leading-relaxed line-clamp-2">
+              {item.shortDescription}
+            </p>
+            
+            <Link 
+              href={`/our-services?service=${item.id}`} 
+              className="inline-flex items-center gap-2 text-[#ED2228] font-bold hover:gap-3 transition-all duration-300 group/link"
+            >
+              Learn More
+              <svg className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+          </div>
+          
+          {/* Hover Border Effect */}
+          <div className="absolute inset-0 border-2 border-[#ED2228] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
         </div>
       ))}
     </div>

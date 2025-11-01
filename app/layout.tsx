@@ -8,9 +8,10 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Trans Trade Solution",
+  title: "Trans Trade Solutions - Supply Chain Excellence",
   description:
-    "welcome to get all of services pertaining to your trade and shipping",
+    "Trans Trade Solutions provides comprehensive logistics and supply chain solutions including international freight forwarding, customs clearance, inland transportation, and transit trade services. Connecting borders with efficient logistics.",
+  keywords: "logistics, supply chain, freight forwarding, customs clearance, international shipping, transit trade, Pakistan logistics",
 };
 
 export default function RootLayout({
@@ -21,8 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <a href="#main-content" className="skip-to-main">
+          Skip to main content
+        </a>
         <Navbar />
-        {children}
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
         <Footer />
         <WhatsAppButton />
       </body>

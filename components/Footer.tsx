@@ -11,9 +11,9 @@ const Footer: React.FC = () => {
         style={{ zIndex: 0 }}
       ></div>
 
-      <div className="relative z-10 bg-white/80 backdrop-blur-sm py-10">
+      <div className="relative z-10 bg-white py-16 border-t-2 border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
             <div>
               <div className="flex justify-center md:justify-start">
                 <Link href="/">
@@ -30,8 +30,8 @@ const Footer: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-3 text-[#ED2228]">Quick Links</h3>
-              <ul>
+              <h3 className="text-lg font-bold mb-6 text-[#ED2228] tracking-tight">Quick Links</h3>
+              <ul className="space-y-3">
                 {[
                   { href: "/", label: "Home" },
                   { href: "/our-mission", label: "About Us" },
@@ -39,62 +39,72 @@ const Footer: React.FC = () => {
                   { href: "/careers", label: "Careers" },
                   { href: "/contact", label: "Contact" },
                 ].map((link) => (
-                  <li key={link.href} className="text-sm mb-2 hover:underline">
-                    <Link href={link.href}>{link.label}</Link>
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-sm text-gray-700 hover:text-[#ED2228] transition-colors duration-200 font-medium">
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-3 text-[#ED2228]">Contact Us</h3>
-              <p className="text-sm mb-2">
-                Suite No. L-311, 3rd Floor, Marine Centre, Block 2, Clifton, Karachi, Pakistan
-              </p>
-              <Link
-                href="mailto:info@transtrade.pk"
-                className="text-sm mb-2 block hover:underline"
-              >
-                Email: cs@transtrade.pk
-              </Link>
-              <Link
-                href="tel:+922132313030"
-                className="text-sm block hover:underline"
-              >
-                Contact: +92 329 2574256 (WhatsApp)
-              </Link>
+              <h3 className="text-lg font-bold mb-6 text-[#ED2228] tracking-tight">Contact Us</h3>
+              <div className="space-y-3">
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  Suite No. L-311, 3rd Floor, Marine Centre, Block 2, Clifton, Karachi, Pakistan
+                </p>
+                <Link
+                  href="mailto:info@transtrade.pk"
+                  className="text-sm text-gray-700 hover:text-[#ED2228] transition-colors duration-200 block font-medium"
+                >
+                  Email: cs@transtrade.pk
+                </Link>
+                <Link
+                  href="tel:+922132313030"
+                  className="text-sm text-gray-700 hover:text-[#ED2228] transition-colors duration-200 block font-medium"
+                >
+                  Contact: +92 329 2574256 (WhatsApp)
+                </Link>
+              </div>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-3 text-[#ED2228]">Follow Us</h3>
-              <div className="flex justify-center md:justify-start space-x-4 ">
+              <h3 className="text-lg font-bold mb-6 text-[#ED2228] tracking-tight">Follow Us</h3>
+              <div className="flex justify-center md:justify-start gap-4">
                 <Link
                   href="https://www.facebook.com/profile.php?id=61559347383483"
                   target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Facebook"
+                  className="p-3 bg-gray-100 rounded-full hover:bg-[#ED2228] hover:text-white text-gray-700 transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 >
-                  <Facebook className="hover:text-gray-300 transition" size={24} />
+                  <Facebook size={20} />
                 </Link>
                 <Link
                   href="https://www.instagram.com/transtradesolutions/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
+                  className="p-3 bg-gray-100 rounded-full hover:bg-[#ED2228] hover:text-white text-gray-700 transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 >
-                  <Instagram className="hover:text-gray-300 transition" size={24} />
+                  <Instagram size={20} />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/company/trans-trade-solutions/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
+                  className="p-3 bg-gray-100 rounded-full hover:bg-[#ED2228] hover:text-white text-gray-700 transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 >
-                  <Linkedin className="hover:text-gray-300 transition" size={24} />
+                  <Linkedin size={20} />
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 border-t border-white/20 pt-4 text-center text-sm ">
-            &copy; 2024 Trans Trade Solutions. All rights reserved.
+          <div className="mt-12 border-t border-gray-200 pt-6 text-center text-sm text-gray-600">
+            <p>&copy; 2024 Trans Trade Solutions. All rights reserved.</p>
           </div>
         </div>
       </div>

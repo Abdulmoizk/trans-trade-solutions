@@ -5,32 +5,36 @@ import { Suspense } from "react";
 
 export default function ServicesPage() {
     return (
-        <main className="overflow-x-hidden">
+        <div className="overflow-x-hidden bg-white">
             <Suspense fallback={null}>
                 <ScrollToService />
             </Suspense>
-            <div className="relative w-full bg-black mt-[72px] sm:mt-[80px]">
-                <div className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[650px] lg:min-h-[700px] overflow-hidden">
-                    <Image
-                        src="/service.jpg"
-                        alt="Expertise background"
-                        fill
-                        className="object-cover animate-ken-burns"
-                        priority
-                        sizes="100vw"
-                    />
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 py-8 sm:py-12 md:py-16">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-                            Our Services
+            
+            {/* Modern Hero Section */}
+            <section className="relative w-full mt-[120px] sm:mt-[128px] min-h-[60vh] flex items-center bg-gradient-to-br from-gray-50 via-white to-gray-50">
+                <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#ED2228]/5 rounded-full blur-3xl"></div>
+                </div>
+                
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                    <div className="text-center max-w-4xl mx-auto space-y-8">
+                        <div className="inline-block px-4 py-2 bg-[#ED2228]/10 rounded-full border border-[#ED2228]/20">
+                            <span className="text-sm font-semibold text-[#ED2228] uppercase tracking-wider">Our Services</span>
+                        </div>
+                        
+                        <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-gray-900 leading-none tracking-tight">
+                            Comprehensive
+                            <span className="block text-[#ED2228] mt-2">Logistics Solutions</span>
                         </h1>
-                        <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl font-bold">
+                        
+                        <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                             We provide a comprehensive platform of innovative, sustainable, and tailored logistics solutions to support foreign trade across global markets.
                         </p>
                     </div>
                 </div>
-            </div>
+            </section>
 
+            {/* Services Details */}
             {shippingServicesData.map((item, index) => {
                 const isEven = index % 2 === 0;
 
@@ -38,36 +42,52 @@ export default function ServicesPage() {
                     <section
                         id={`service-${item.id}`}
                         key={item.id}
-                        className={`flex flex-col-reverse ${isEven ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-10 max-w-7xl px-4 py-20 mx-auto`}
+                        className={`py-24 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} relative overflow-hidden`}
                     >
-                        <div className="w-full md:w-1/2 space-y-6">
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ED2228]">
-                                {item.title}
-                            </h2>
-                            <div className="space-y-4">
-                                {item.content.map((paragraph, idx) => (
-                                    <p
-                                        key={idx}
-                                        className="text-base sm:text-lg lg:text-xl text-gray-700 font-medium leading-relaxed"
-                                    >
-                                        {paragraph}
-                                    </p>
-                                ))}
-                            </div>
-                        </div>
+                        <div className={`absolute ${isEven ? 'top-0 right-0' : 'bottom-0 left-0'} w-[500px] h-[500px] bg-[#ED2228]/5 rounded-full blur-3xl`}></div>
+                        
+                        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div className={`grid lg:grid-cols-2 gap-16 items-center ${isEven ? '' : 'lg:grid-flow-dense'}`}>
+                                {/* Content Section */}
+                                <div className={`space-y-6 ${isEven ? 'lg:order-1' : 'lg:col-start-2 lg:order-2'}`}>
+                                    <div className="inline-block px-4 py-2 bg-[#ED2228]/10 rounded-full border border-[#ED2228]/20">
+                                        <span className="text-sm font-semibold text-[#ED2228] uppercase tracking-wider">Service {item.id}</span>
+                                    </div>
+                                    
+                                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
+                                        {item.title}
+                                    </h2>
+                                    
+                                    <div className="space-y-4">
+                                        {item.content.map((paragraph, idx) => (
+                                            <p
+                                                key={idx}
+                                                className="text-lg md:text-xl text-gray-600 leading-relaxed"
+                                            >
+                                                {paragraph}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
 
-                        <div className="w-full md:w-1/2 flex justify-center">
-                            <Image
-                                src={item.img || "/fallback.jpg"}
-                                alt={`${item.title} image`}
-                                width={600}
-                                height={500}
-                                className="rounded-xl shadow-xl object-cover"
-                            />
+                                {/* Image Section */}
+                                <div className={`relative ${isEven ? 'lg:order-2' : 'lg:col-start-1 lg:row-start-1 lg:order-1'}`}>
+                                    <div className={`absolute ${isEven ? '-right-8 -bottom-8' : '-left-8 -top-8'} w-full h-full border-2 border-[#ED2228]/20 rounded-3xl`}></div>
+                                    <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                                        <Image
+                                            src={item.img || "/fallback.jpg"}
+                                            alt={`${item.title} service illustration`}
+                                            width={700}
+                                            height={700}
+                                            className="object-cover w-full h-[500px]"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 );
             })}
-        </main>
+        </div>
     );
 }
