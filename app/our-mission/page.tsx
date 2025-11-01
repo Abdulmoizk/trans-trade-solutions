@@ -4,12 +4,12 @@ export default function AboutPage() {
     return (
         <main className="overflow-x-hidden">
             <div className="relative w-full bg-black mt-[72px] sm:mt-[80px]">
-                <div className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[650px] lg:min-h-[700px]">
+                <div className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[650px] lg:min-h-[700px] overflow-hidden">
                     <Image
                         src="/about.jpg"
                         alt="Expertise background"
                         fill
-                        className="object-cover"
+                        className="object-cover animate-ken-burns"
                         priority
                         sizes="100vw"
                     />

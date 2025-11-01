@@ -1,5 +1,5 @@
 import React from "react";
-import { shippingServicesData } from "../data/data";
+import { shippingServicesData } from "@/constants/data";
 import { Truck, Search, Layers, Ship, Calculator, ArrowLeftRight } from "lucide-react"; 
 import Link from "next/link";
 
@@ -17,9 +17,9 @@ const Card = () => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
-      {shippingServicesData.map((item, index) => (
+      {shippingServicesData.map((item) => (
         <div
-          key={index}
+          key={item.id}
           className="relative h-[420px] w-full rounded-xl overflow-hidden group shadow-lg hover:shadow-xl transition-all duration-300"
         >
           <div

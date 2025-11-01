@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { X as CloseIcon, AlignJustify as MenuIcon } from "lucide-react";
 import MenuItems from "./MenuItems";
-import AnimatedDialog from "./ui/animatedDialog";
+import AnimatedDialog from "./ui/AnimatedDialog";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -37,7 +37,7 @@ const Navbar = () => {
     <>
       <div className="fixed top-0 left-0 w-full h-8 bg-[#ED2228] z-[60] flex items-center overflow-hidden">
         <div className="animate-slide whitespace-nowrap text-white text-sm font-medium px-4">
-          🚚 TransTrade Solutions – Your trusted partner in global logistics. Track shipments 24/7 | Call us: +92 21 1234567
+          🚢 TransTrade Solutions – Your trusted partner in global logistics. | Call us: +92 329 2574256
         </div>
       </div>
 
