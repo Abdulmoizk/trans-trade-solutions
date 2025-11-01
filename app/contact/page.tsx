@@ -22,7 +22,7 @@ export default function ContactPage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Have questions or need more information? Our team is here to help. You can reach out to us using the contact form below or directly via email at cs@transtrade.pk. We're ready to assist you with all your inquiries promptly and professionally.
+              Have questions or need more information? Our team is here to help. You can reach out to us using the contact form below or directly via email at cs@transtrade.pk. We&apos;re ready to assist you with all your inquiries promptly and professionally.
             </p>
           </div>
         </div>
