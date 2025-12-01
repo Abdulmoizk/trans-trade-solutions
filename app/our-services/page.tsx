@@ -2,6 +2,18 @@ import ScrollToService from "@/components/ScrollToService";
 import { shippingServicesData } from "@/constants/data";
 import Image from "next/image";
 import { Suspense } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services - Comprehensive Logistics Solutions | Trans Trade Solutions",
+  description: "Explore our comprehensive logistics services including international freight forwarding, customs clearance, inland transportation, warehousing, and transit trade. Expert supply chain solutions for global markets.",
+  keywords: "freight forwarding, customs clearance, inland transportation, warehousing, transit trade, international shipping, logistics services, supply chain management",
+  openGraph: {
+    title: "Our Services - Trans Trade Solutions",
+    description: "Comprehensive logistics and supply chain solutions tailored for global trade",
+    type: "website",
+  },
+};
 
 export default function ServicesPage() {
     return (

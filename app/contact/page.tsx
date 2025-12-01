@@ -1,5 +1,17 @@
 import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us - Get in Touch | Trans Trade Solutions",
+  description: "Contact Trans Trade Solutions for all your logistics and supply chain inquiries. Reach us at cs@transtrade.pk or visit our office in Karachi, Pakistan. We're here to help with your shipping needs.",
+  keywords: "contact trans trade solutions, logistics inquiry, freight forwarding contact, cs@transtrade.pk, Karachi logistics office",
+  openGraph: {
+    title: "Contact Us - Trans Trade Solutions",
+    description: "Get in touch with our logistics experts for customized supply chain solutions",
+    type: "website",
+  },
+};
 
 export default function ContactPage() {
   return (

@@ -1,4 +1,16 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - Our Mission & Values | Trans Trade Solutions",
+  description: "Learn about Trans Trade Solutions - a leading logistics provider specializing in Pakistan and Transit Trade to Afghanistan, Uzbekistan, and CIS countries. Discover our mission, vision, and commitment to excellence.",
+  keywords: "about trans trade solutions, logistics company Pakistan, transit trade Afghanistan, CIS logistics, company mission, supply chain expertise",
+  openGraph: {
+    title: "About Us - Trans Trade Solutions",
+    description: "Driven by efficiency, reliability and innovation in supply chain management",
+    type: "website",
+  },
+};
 
 export default function AboutPage() {
     return (

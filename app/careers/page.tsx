@@ -1,4 +1,16 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Careers - Join Our Team | Trans Trade Solutions",
+  description: "Explore career opportunities at Trans Trade Solutions. We offer positions in logistics, supply chain, documentation, customer service, and more. Join our Trainee Development Program for fresh graduates.",
+  keywords: "logistics careers, freight forwarding jobs, supply chain careers, Pakistan logistics jobs, trainee development program, career opportunities",
+  openGraph: {
+    title: "Careers - Trans Trade Solutions",
+    description: "Join our team and grow your career in logistics and supply chain management",
+    type: "website",
+  },
+};
 
 export default function CareersPage() {
     const benefits = [
