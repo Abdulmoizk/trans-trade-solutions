@@ -146,7 +146,7 @@ export default function CareersPage() {
                         </p>
                         
                         <a
-                            href="mailto:hr@transtrade.pk"
+                            href="mailto:talent@transtrade.pk"
                             className="inline-flex items-center gap-2 px-10 py-4 bg-white text-[#ED2228] text-lg font-black rounded-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 mt-4"
                         >
                             Submit Your Resume
