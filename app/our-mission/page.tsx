@@ -9,6 +9,22 @@ export const metadata: Metadata = {
     title: "About Us - Trans Trade Solutions",
     description: "Driven by efficiency, reliability and innovation in supply chain management",
     type: "website",
+    url: "https://www.transtrade.pk/our-mission",
+    siteName: "Trans Trade Solutions",
+    images: [
+      {
+        url: '/Logo.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Trans Trade Solutions Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "About Us - Trans Trade Solutions",
+    description: "Driven by efficiency, reliability and innovation in supply chain management",
+    images: ['/Logo.svg'],
   },
 };
 

@@ -12,6 +12,22 @@ export const metadata: Metadata = {
     title: "Our Services - Trans Trade Solutions",
     description: "Comprehensive logistics and supply chain solutions tailored for global trade",
     type: "website",
+    url: "https://www.transtrade.pk/our-services",
+    siteName: "Trans Trade Solutions",
+    images: [
+      {
+        url: '/Logo.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Trans Trade Solutions Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Our Services - Trans Trade Solutions",
+    description: "Comprehensive logistics and supply chain solutions tailored for global trade",
+    images: ['/Logo.svg'],
   },
 };
 

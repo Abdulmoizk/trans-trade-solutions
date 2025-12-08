@@ -9,6 +9,22 @@ export const metadata: Metadata = {
     title: "Careers - Trans Trade Solutions",
     description: "Join our team and grow your career in logistics and supply chain management",
     type: "website",
+    url: "https://www.transtrade.pk/careers",
+    siteName: "Trans Trade Solutions",
+    images: [
+      {
+        url: '/Logo.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Trans Trade Solutions Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Careers - Trans Trade Solutions",
+    description: "Join our team and grow your career in logistics and supply chain management",
+    images: ['/Logo.svg'],
   },
 };
 

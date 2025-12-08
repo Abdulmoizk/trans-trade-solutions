@@ -10,6 +10,22 @@ export const metadata: Metadata = {
     title: "Contact Us - Trans Trade Solutions",
     description: "Get in touch with our logistics experts for customized supply chain solutions",
     type: "website",
+    url: "https://www.transtrade.pk/contact",
+    siteName: "Trans Trade Solutions",
+    images: [
+      {
+        url: '/Logo.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Trans Trade Solutions Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Contact Us - Trans Trade Solutions",
+    description: "Get in touch with our logistics experts for customized supply chain solutions",
+    images: ['/Logo.svg'],
   },
 };
 
